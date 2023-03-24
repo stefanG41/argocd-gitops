@@ -6,4 +6,10 @@ kind: ConfigMap
 metadata:
   name: argocd-ingress-ingress-nginx-controller
   namespace: argocd
+spec:
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
+      selfHeal: true
 ---
